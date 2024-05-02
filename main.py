@@ -4,7 +4,6 @@ import google.generativeai as genai
 import google.generativeai.types as gtypes
 from PIL import Image
 
-
 class GenerativeAI:
     def __init__(self, api_key: str) -> None:
         genai.configure(api_key=api_key)
@@ -84,7 +83,7 @@ class GenerativeAI:
             print("No candidates in response")
         return response.text
 def main() -> None:
-    api_key = "AIzaSyDF5zuBmIBLZaUFEmuu2ajLJrFcBaSkFF4"  # Add your API key here
+    api_key = ""  # Add your API key here
     generative_ai = GenerativeAI(api_key)
 
     # List available models
@@ -157,7 +156,6 @@ def main() -> None:
         generation_config,
     )
     print(config_response)
-
 
 if __name__ == "__main__":
     main()
